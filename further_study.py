@@ -24,8 +24,10 @@ def custom_len(input_list):
     8
 
     """
-
-    return 0
+    count = 0
+    for i in input_list:
+        count = count + 1
+    return count
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -50,8 +52,11 @@ def custom_append(input_list, value):
     True
 
     """
-
-    pass
+    # we are slicing here the last element of the list so when we assign a new 
+    #list of elements they will be a part of the current list, as last two elements
+    # instead of bean a list of two elements within the list 
+    input_list[-1:] = [input_list[-1], value]
+    
 
 
 def custom_extend(input_list, second_list):
@@ -68,7 +73,7 @@ def custom_extend(input_list, second_list):
 
     """
 
-    pass
+    
 
 
 def custom_insert(input_list, index, value):
